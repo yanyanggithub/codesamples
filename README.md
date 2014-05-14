@@ -15,5 +15,3 @@ Compile the source using gcc:
 Run demo
 > ./main
 
-Have fun!
-
