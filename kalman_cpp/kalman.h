@@ -4,7 +4,7 @@
  *
  *  @author Yan Yang
  *
- *  reference:
+ *  References:
  *  [1] Greg Welch and Gary Bishop (2006), "An Introduction to the Kalman
  *   Filter". http://www.cs.unc.edu/~welch/kalman/kalmanIntro.html
  *  [2] Kalman, R. E. (1960). "A New Approach to Linear Filtering and
