@@ -40,11 +40,13 @@ class mat2
 public:
 	double a11, a12, a21, a22;
 public:
-	mat2 (double a11 = 0.0, double a12 = 0.0, double a21 = 0.0,	double a22 = 0.0) : a11(a11), a12(a12), a21(a21), a22(a22) {};
+	mat2 (double a11=0.0, double a12=0.0, double a21=0.0,	double a22=0.0) :
+		a11(a11), a12(a12), a21(a21), a22(a22) {};
 	mat2 t() { return mat2(a11, a21, a12, a22); }
 	mat2 operator +(mat2 m) { return mat2(a11 + m.a11, a12 + m.a12, a21 + m.a21, a22 + m.a22); }
 	mat2 operator -(mat2 m) { return mat2(a11 - m.a11, a12 - m.a12, a21 - m.a21, a22 - m.a22); }
-	mat2 operator *(mat2 m) { return mat2(a11*m.a11 + a12*m.a21, a11*m.a12 + a12*m.a22, a21*m.a11 + a22*m.a21, a21*m.a12 + a22*m.a22); }
+	mat2 operator *(mat2 m) { return mat2(a11*m.a11 + a12*m.a21, a11*m.a12 + a12*m.a22,
+			a21*m.a11 + a22*m.a21, a21*m.a12 + a22*m.a22); }
 	vec2 operator *(vec2 v) { return vec2(a11*v.x + a12*v.y, a21*v.x + a22*v.y); }
 	mat2 inv()
 	{
