@@ -39,7 +39,6 @@ class mat2
 {
 public:
 	double a11, a12, a21, a22;
-public:
 	mat2 (double a11=0.0, double a12=0.0, double a21=0.0,	double a22=0.0) :
 		a11(a11), a12(a12), a21(a21), a22(a22) {};
 	mat2 t() { return mat2(a11, a21, a12, a22); }
@@ -147,7 +146,7 @@ void kalman_filter::init (double x, double y)
 
 void kalman_filter::update()
 /*!
- * @brief update the state status
+ * @brief 1D Kalman: update the state status
  */
 {
 	//time update
@@ -160,7 +159,7 @@ void kalman_filter::update()
 
 double kalman_filter::predict(double x)
 /*!
- * @brief predict the correct value according to the current measurement
+ * @brief 1D Kalman: predict the correct value according to the current measurement
  */
 {
 	update();
@@ -170,6 +169,9 @@ double kalman_filter::predict(double x)
 }
 
 vec2 kalman_filter::predict()
+/*!
+ * @brief 2D Kalman: predict the correct value given the current state (x,y)
+ */
 {
 	//update the state x'(k) = A*x(k)
 	statePre = transitionMatrix * statePost;
@@ -188,6 +190,9 @@ vec2 kalman_filter::predict()
 }
 
 vec2 kalman_filter::correct(double x, double y)
+/*
+ * @brief 2D Kalman: update the state status
+ */
 {
 	mat2 temp1, temp2, temp3;
 	vec2 temp4;
