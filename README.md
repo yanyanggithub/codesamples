@@ -1,6 +1,6 @@
 Kalman Filter
 ===========
-Given a stream of noisy input data, the Kalman filter provides statisically optimal estimations of the states of a system. The implementation here demonstrates a real-time tracking system using Kalman filter. The green cross keeps tracking the mouse input postion (the red square), while adding measurement error in the range of [-50, 50] pixels.
+Given a stream of noisy input data, the Kalman filter provides statisically optimal estimations of the states of a system. The implementation here demonstrates a real-time tracking system using Kalman filter. The green cross presents an optimal estiation of the mouse input postion (the red square), while adding measurement error in the range of [-50, 50] pixels.
 
 The graphic interface uses OpenGL libraries.
 
